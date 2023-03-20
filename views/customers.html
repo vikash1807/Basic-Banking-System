@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/customers.css">
+    <title>Sopra bank</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navcontainer">
+            <div class="logo">
+                <a href="/"><img src="../static/img/logo.png" alt="logo"></a>
+            </div>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">Send money</a></li>
+            <li><a href="/" id="btn3" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Transactions</a></li>
+        </div>
+    </nav>
+    <section class="tablecontainer">
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Balance</th>
+                <th>Transfer Money</th>
+            </tr>
+            <tbody class="tableBody">
+                <tr id="john" class="john">
+                    <td>john</td>
+                    <td>john@gmail.com</td>
+                    <td>20000</td>
+                    <td><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Send
+                            Money</button></td>
+                </tr>
+                <tr id="krish">
+                    <td>krish</td>
+                    <td>krish@gmail.com</td>
+                    <td>20000</td>
+                    <td><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Send
+                            Money</button></td>
+
+                </tr>
+                <tr id="harry">
+                    <td>harry</td>
+                    <td>harry@gmail.com</td>
+                    <td>20000</td>
+                    <td><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Send
+                            Money</button></td>
+
+                </tr>
+                <tr id="sachin">
+                    <td>sachin</td>
+                    <td>sachin@gmail.com</td>
+                    <td>20000</td>
+                    <td><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Send
+                            Money</button></td>
+
+                </tr>
+                <tr id="jagi">
+                    <td>jagi</td>
+                    <td>jagi@gmail.com</td>
+                    <td>20000</td>
+                    <td><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Send
+                            Money</button></td>
+
+                </tr>
+                <tr id="vivek">
+                    <td>vivek</td>
+                    <td>vivek@gmail.com</td>
+                    <td>20000</td>
+                    <td><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Send
+                            Money</button></td>
+
+                </tr>
+                <tr id="manu">
+                    <td>manu</td>
+                    <td>manu@gmail.com</td>
+                    <td>20000</td>
+                    <td><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Send
+                            Money</button></td>
+
+                </tr>
+                <tr id="deepak">
+                    <td>deepak</td>
+                    <td>deepak@gmail.com</td>
+                    <td>20000</td>
+                    <td><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Send
+                            Money</button></td>
+
+                </tr>
+                <tr id="ayush">
+                    <td>ayush</td>
+                    <td>ayush@gmail.com</td>
+                    <td>20000</td>
+                    <td><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Send
+                            Money</button></td>
+
+                </tr>
+                <tr id="vikash">
+                    <td>vikash</td>
+                    <td>vikash@gmail.com</td>
+                    <td>20000</td>
+                    <td><button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">Send
+                            Money</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- send money -->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Send Money</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="receiver" placeholder="Receiver's username"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <span class="input-group-text" id="basic-addon2">@gmail.com</span>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="amount"
+                                aria-label="Dollar amount (with dot and two decimal places)">
+                            <span class="input-group-text">$</span>
+                            <span class="input-group-text">0.00</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id = "sendMoney" data-bs-dismiss="modal">Send Money</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- transaction history -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Transaction history</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <ol id ="historyContent">
+              </ol>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/static/moeny.js"></script>
+</body>
+
+</html>
